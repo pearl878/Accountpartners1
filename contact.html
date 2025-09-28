@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 3rem;
+    background: #ffffff;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  header .logo img {
+    height: 90px;
+    width: 90px;
+  }
+  nav a {
+    text-decoration: none;
+    color: #003366;
+    margin-left: 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #0073e6; /* Brighter blue */
+  }
+   .menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #003366;
+}
+  @media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  nav a {
+    padding: 0.75rem 1.5rem;
+    margin: 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  }
+ 
+
+.contact-section {
+  background-color: #f9f9f9;
+  padding: 60px 30px;
+  color: #333333;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contact-info h2 {
+  font-size: 28px;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.contact-icons span {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 280px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 51, 102, 0.1);
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #003366;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.contact-form button {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #e65c00;
+}
+
+#success-message {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-form,
+  .contact-info {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact-form label {
+    text-align: left;
+  }
+}
+footer {
+  background-color: #003366;
+  color: white;
+  padding: 40px 20px 20px;
+  font-size: 14px;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-wrapper div {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-brand h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #ff6600;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #ff6600;
+}
+
+.footer-links a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffcc00;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #ffffff33;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #cccccc;
+}
+
+@media (max-width: 768px) {
+  .footer-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-wrapper div {
+    margin-bottom: 20px;
+  }
+}
+
+
+    </style>
+</head>
+<body>
+     <header>
+  <div class="logo">
+    <img src="yt.png" alt="Accountpartners Logo" />
+  </div>
+  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+  <nav id="nav-menu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="faq.html">FAQ</a>
+</nav>
+</header>
+<section class="contact-section">
+  <div class="contact-wrapper">
+    <div class="contact-info">
+      <h2>WE WANT TO HEAR FROM YOU.</h2>
+      <p>Email: apartners247@gmail.com</p>
+      <p>Phone: 07033088392</p>
+      <p>Location: Ibadan, Nigeria</p>
+      <div class="contact-icons">
+        <span>📧</span>
+        <span>📞</span>
+      </div>
+    </div>
+
+    <form class="contact-form" action="https://formspree.io/f/mwprvdoq" method="POST" id="contact-form">
+      <label for="first-name">First Name *</label>
+      <input type="text" id="first-name" name="first-name" required>
+
+      <label for="last-name">Last Name</label>
+      <input type="text" id="last-name" name="last-name">
+
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5"></textarea>
+
+      <button type="submit">Send</button>
+      <p id="success-message" style="display:none; color: green; margin-top: 15px;">✅ Thank you! Your message has been sent.</p>
+    </form>
+  </div>
+</section>
+<footer>
+  <div class="footer-wrapper">
+    <div class="footer-brand">
+      <h3>Accountpartners</h3>
+      <p>“Don’t just business—accurate it.”</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p>Email: apartners247@gmail.com/info@acountpartners.ng</p>
+      <p>Phone: 07033088392/08055855102</p>
+      <p>Address: 11 Temidire Street, Ringroad, Ibadan</p>
+      <p>Address: 60 CMD Road (By secretariat Bus-stop), Macodo, Lagos.</p>
+
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Accountpartners. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const form = document.getElementById('contact-form');
+  const successMessage = document.getElementById('success-message');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        successMessage.style.display = 'block';
+        form.reset();
+      } else {
+        alert('Oops! Something went wrong. Please try again.');
+      }
+    });
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById("menu-toggle");
+    const navMenu = document.getElementById("nav-menu");
+
+    toggle.addEventListener("click", function () {
+      navMenu.classList.toggle("active");
+    });
+  });
+</script>
+
+</body>
+</html>

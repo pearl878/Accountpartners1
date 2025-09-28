@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 3rem;
+    background: #ffffff;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  header .logo img {
+    height: 90px;
+    width: 90px;
+  }
+  nav a {
+    text-decoration: none;
+    color: #003366;
+    margin-left: 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #0073e6; /* Brighter blue */
+  }
+   .menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #003366;
+}
+  @media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  nav a {
+    padding: 0.75rem 1.5rem;
+    margin: 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  }
+ 
+
+footer {
+  background-color: #003366;
+  color: white;
+  padding: 40px 20px 20px;
+  font-size: 14px;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-wrapper div {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-brand h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #ff6600;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #ff6600;
+}
+
+.footer-links a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffcc00;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #ffffff33;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #cccccc;
+}
+
+@media (max-width: 768px) {
+  .footer-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-wrapper div {
+    margin-bottom: 20px;
+  }
+}
+.faq-section {
+  padding: 60px 30px;
+  background-color: #ffffff;
+  color: #003366;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.faq-section h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.faq-container .faq-item {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+.testimonial-section {
+  padding: 60px 30px;
+  background-color: #ffffff;
+  color: #003366;
+  text-align: center;
+}
+
+.testimonial-section h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.testimonial-grid {
+ 
+    display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px; /* This adds space between cards */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* Optional: adds space on the sides */
+}
+
+.testimonial-card {
+  perspective: 1000px;
+  height: 200px;
+  position: relative;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.testimonial-card .card-front,
+.testimonial-card .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 51, 102, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 1.6;
+  transition: transform 0.6s ease;
+}
+
+.card-front {
+  background-color: #f9f9f9;
+  color: #003366;
+}
+
+.card-back {
+  background-color: #ff6600;
+  color: white;
+  transform: rotateY(180deg);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.testimonial-card.flipped .card-front {
+  transform: rotateY(180deg);
+}
+
+.testimonial-card.flipped .card-back {
+  transform: rotateY(0deg);
+}
+
+.faq-question {
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+  color: #ff6600;
+}
+
+.faq-answer {
+  display: none;
+  font-size: 15px;
+  color: #333333;
+}
+
+
+
+    </style>
+</head>
+<body>
+       <header>
+  <div class="logo">
+    <img src="yt.png" alt="Accountpartners Logo" />
+  </div>
+  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+  <nav id="nav-menu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<section class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-container">
+    <div class="faq-item">
+      <h3 class="faq-question">What services does Accountpartners offer?</h3>
+      <p class="faq-answer">We offer bookkeeping, tax filing prep, payroll setup, internal controls, and business consulting tailored to your needs.</p>
+    </div>
+    <div class="faq-item">
+      <h3 class="faq-question">Who do you work with?</h3>
+      <p class="faq-answer">We support startups, SMEs, and growing businesses across Nigeria looking for structure and financial clarity.</p>
+    </div>
+    <div class="faq-item">
+      <h3 class="faq-question">Do you offer custom service bundles?</h3>
+      <p class="faq-answer">Yes! We create flexible packages based on your business model, goals, and budget.</p>
+    </div>
+    <div class="faq-item">
+      <h3 class="faq-question">Can you help with tax compliance?</h3>
+      <p class="faq-answer">Absolutely. We prepare tax documents, advise on payment schedules, and support you through filing seasons.</p>
+    </div>
+    <div class="faq-item">
+      <h3 class="faq-question">Do you train staff on accounting tools?</h3>
+      <p class="faq-answer">Yes, we offer training to help your team manage payroll and accounting systems confidently.</p>
+    </div>
+    <div class="faq-item">
+      <h3 class="faq-question">How do I get started?</h3>
+      <p class="faq-answer">Just reach out via our contact form or WhatsApp. We’ll schedule a discovery call to understand your needs.</p>
+    </div>
+    <div class="faq-item">
+      <h3 class="faq-question">Is your service remote or in-person?</h3>
+      <p class="faq-answer">We offer both! Our team can work virtually or meet in person depending on your location and preference.</p>
+    </div>
+    <div class="faq-item">
+      <h3 class="faq-question">Do you offer monthly reporting?</h3>
+      <p class="faq-answer">Yes, we provide monthly financial statements and performance summaries to keep you informed.</p>
+    </div>
+    <div class="faq-item">
+      <h3 class="faq-question">Can you help with stocktaking?</h3>
+      <p class="faq-answer">We assist with accurate inventory audits and internal control systems to protect your assets.</p>
+    </div>
+    <div class="faq-item">
+      <h3 class="faq-question">What makes Accountpartners different?</h3>
+      <p class="faq-answer">We blend precision with personality—making financial clarity feel effortless and empowering.</p>
+    </div>
+  </div>
+</section>
+<section class="testimonial-section">
+  <h2>What Our Clients Say</h2>
+  <div class="testimonial-grid">
+    <div class="testimonial-card" data-name="Chinedu A.">
+      <div class="card-front">Accountpartners helped me turn my side hustle into a structured business. Their monthly reports are gold.</div>
+      <div class="card-back">Chinedu A.</div>
+    </div>
+    <div class="testimonial-card" data-name="Fatima O.">
+      <div class="card-front">I used to dread tax season. Now I feel confident and supported thanks to their expert guidance.</div>
+      <div class="card-back">Fatima O.</div>
+    </div>
+    <div class="testimonial-card" data-name="Tunde B.">
+      <div class="card-front">Their team is responsive, professional, and genuinely invested in my business growth.</div>
+      <div class="card-back">Tunde B.</div>
+    </div>
+    <div class="testimonial-card" data-name="Ngozi M.">
+      <div class="card-front">I love how they simplify complex financial stuff. It’s like having a CFO on call.</div>
+      <div class="card-back">Ngozi M.</div>
+    </div>
+    <div class="testimonial-card" data-name="Kemi A.">
+      <div class="card-front">The training they gave my staff was practical and easy to implement. We’re more efficient now.</div>
+      <div class="card-back">Kemi A.</div>
+    </div>
+    <div class="testimonial-card" data-name="David E.">
+      <div class="card-front">They helped me clean up years of messy records and set up a proper system. Game changer.</div>
+      <div class="card-back">David E.</div>
+    </div>
+    <div class="testimonial-card" data-name="Aisha S.">
+      <div class="card-front">Their custom bundle fit my business perfectly. No fluff—just what I needed.</div>
+      <div class="card-back">Aisha S.</div>
+    </div>
+    <div class="testimonial-card" data-name="Bola T.">
+      <div class="card-front">I finally understand my numbers. Their reports are clear and actionable.</div>
+      <div class="card-back">Bola T.</div>
+    </div>
+    <div class="testimonial-card" data-name="Yusuf K.">
+      <div class="card-front">They’re not just accountants—they’re partners. I trust them with every financial decision.</div>
+      <div class="card-back">Yusuf K.</div>
+    </div>
+    <div class="testimonial-card" data-name="Grace N.">
+      <div class="card-front">From onboarding to monthly check-ins, their service has been seamless and supportive.</div>
+      <div class="card-back">Grace N.</div>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+
+  <div class="footer-wrapper">
+    <div class="footer-brand">
+      <h3>Accountpartners</h3>
+      <p>“Don’t just business—accurate it.”</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+     <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p>Email: apartners247@gmail.com/info@acountpartners.ng</p>
+      <p>Phone: 07033088392/08055855102</p>
+      <p>Address: 11 Temidire Street, Ringroad, Ibadan</p>
+      <p>Address: 60 CMD Road (By secretariat Bus-stop), Macodo, Lagos.</p>
+      
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Accountpartners. All rights reserved.</p>
+  </div>
+</footer>
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById("menu-toggle");
+    const navMenu = document.getElementById("nav-menu");
+
+    toggle.addEventListener("click", function () {
+      navMenu.classList.toggle("active");
+    });
+  });
+
+  // FAQ toggle
+  document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+      const answer = question.nextElementSibling;
+      answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(".testimonial-card");
+
+    cards.forEach(card => {
+      let flipped = false;
+
+      setInterval(() => {
+        flipped = !flipped;
+        card.classList.toggle("flipped", flipped);
+      }, 4000);
+    });
+  });
+</script>
+</body>
+</html>

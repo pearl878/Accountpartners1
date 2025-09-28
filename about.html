@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f8ff; /* Light blueish white */
+    margin: 0;
+    padding: 0;
+    color: #003366; /* Deep blue */
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 3rem;
+    background: #ffffff;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  header .logo img {
+    height: 90px;
+    width: 90px;
+  }
+  nav a {
+    text-decoration: none;
+    color: #003366;
+    margin-left: 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #0073e6; /* Brighter blue */
+  }
+   .menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #003366;
+}
+        @media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  nav a {
+    padding: 0.75rem 1.5rem;
+    margin: 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+        }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+.suits-cute {
+  background-color: #ffffff;
+  padding: 60px 30px;
+  color: #333333;
+}
+
+.suits-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.suits-text {
+  flex: 1;
+  min-width: 280px;
+  max-width: 500px;
+}
+
+.headline {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.underline {
+  text-decoration: underline;
+  text-decoration-color: #ffcc00;
+}
+
+.suits-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.suits-image {
+  flex: 1;
+  max-width: 400px;
+  text-align: center;
+}
+
+.suits-image img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 51, 102, 0.2);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .suits-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .headline {
+    font-size: 28px;
+  }
+
+  .suits-text p {
+    font-size: 15px;
+  }
+
+  .suits-image img {
+    max-width: 280px;
+  }
+}
+.core-values {
+  background-color: #f9f9f9;
+  padding: 60px 30px;
+  color: #333333;
+}
+
+.values-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.value-block {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 51, 102, 0.1);
+  padding: 20px;
+  max-width: 350px;
+  flex: 1;
+  text-align: center;
+}
+
+.value-block img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.value-block h3 {
+  color: #003366;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.value-block p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.value-block ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.value-block ul li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.value-block ul li strong {
+  color: #ff6600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .values-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .value-block {
+    max-width: 100%;
+  }
+}
+footer {
+  background-color: #003366;
+  color: white;
+  padding: 40px 20px 20px;
+  font-size: 14px;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-wrapper div {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-brand h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #ff6600;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #ff6600;
+}
+
+.footer-links a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffcc00;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #ffffff33;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #cccccc;
+}
+
+@media (max-width: 768px) {
+  .footer-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-wrapper div {
+    margin-bottom: 20px;
+  }
+}
+ 
+
+.founder-quote {
+  font-style: italic;
+  font-size: 16px;
+  color: #ff6600;
+  margin-top: 20px;
+  border-left: 4px solid #ffcc00;
+  padding-left: 15px;
+}
+.founder-section {
+  background-color: #ffffff;
+  padding: 60px 30px;
+  color: #333333;
+}
+
+.founder-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.founder-image {
+  flex: 1;
+  max-width: 400px;
+  text-align: center;
+}
+
+.founder-image img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 51, 102, 0.2);
+}
+
+.founder-text {
+  flex: 1;
+  min-width: 280px;
+  max-width: 600px;
+}
+
+.founder-text h2 {
+  font-size: 28px;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.founder-text h3 {
+  font-size: 22px;
+  color: #ff6600;
+  margin-bottom: 15px;
+}
+
+.founder-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .founder-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .founder-text h2 {
+    font-size: 24px;
+  }
+
+  .founder-text h3 {
+    font-size: 20px;
+  }
+
+  .founder-text p {
+    font-size: 15px;
+  }
+
+  .founder-image img {
+    max-width: 280px;
+  }
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+  <div class="logo">
+    <img src="yt.png" alt="Accountpartners Logo" />
+  </div>
+  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+  <nav id="nav-menu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="faq.html">FAQ</a>
+
+  </nav>
+</header>
+<section class="suits-cute">
+  <div class="suits-content">
+    <div class="suits-text">
+      <h2 class="headline">
+        WE HANDLE COMPLIANCE, YOU HANDLE EXPANSION.
+      </h2>
+      <p>Led by a team of Chartered Accountants and business consultants, Accountpartners blends precision with personality. We go beyond number-crunching to deliver tailored financial solutions that help entrepreneurs thrive.</p>
+      <p>Trusted advisors for SMEs, startups, and growing businesses.
+        We help Nigerian entrepreneurs turn hustle into structure.
+
+No more stress with tax and records, we handle it for you.
+
+
+
+We speak the language of business- clarity, growth, and profit.</p>
+    </div>
+    <div class="suits-image">
+      <img id="swap-image" src="https://images.unsplash.com/photo-1608303588026-884930af2559?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGNhbGN1bGF0b3J8ZW58MHx8MHx8fDA%3D" alt="Stylish business team">
+    </div>
+  </div>
+</section>
+<section class="core-values">
+  <div class="values-container">
+    <div class="value-block">
+      <img src="https://media.istockphoto.com/id/1344939844/photo/hand-holding-drawing-virtual-lightbulb-with-brain-on-bokeh-background-for-creative-and-smart.webp?a=1&b=1&s=612x612&w=0&k=20&c=Q1LGFdFoZQ0YRWTcHtSZpvfJ_DtgD86aMMuUYxPtz8s=" alt="Mission Image">
+      <h3>Our Mission</h3>
+      <p>We are committed to delivering exceptional accounting and business advisory services that exceed expectations and empower our clients to thrive financially. We build long-term relationships and contribute to their growth with personalized attention.</p>
+    </div>
+    <div class="value-block">
+      <img src="https://images.unsplash.com/photo-1746021278356-66b31ca55dbb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNvbXBhbnklMjB2aXNpb258ZW58MHx8MHx8fDA%3D" alt="Vision Image">
+      <h3>Our Vision</h3>
+      <p>To be the trusted partner for businesses seeking growth and stability through expert financial management. We aim to simplify complexity and bring clarity to every decision.</p>
+    </div>
+    <div class="value-block">
+      <img src="https://media.istockphoto.com/id/2170991268/photo/values-word-cloud.webp?a=1&b=1&s=612x612&w=0&k=20&c=rHKqWyA37v8CZjMaYYRWvjEdneuy5Nf8Dwe0DSsuvkU=" alt="Values Image">
+      <h3>Our Values</h3>
+      <ul>
+        <li><strong>Integrity:</strong> We operate with transparency, honesty, and ethics.</li>
+        <li><strong>Expertise:</strong> Our team stays ahead of trends in accounting and business strategy.</li>
+        <li><strong>Customer Focus:</strong> We tailor solutions to meet each client’s unique needs.</li>
+        <li><strong>Innovation:</strong> We embrace technology to improve efficiency and service quality.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="founder-section">
+  <div class="founder-wrapper">
+    <div class="founder-image">
+      <img src="cv.jpeg" alt="Founder Olanike Olapeju Babalola">
+    </div>
+    <div class="founder-text">
+      <h2>Meet Our Founder</h2>
+      <h3 id="founder-name"></h3>
+      <p>Olanike is a visionary Chartered Accountant and business strategist with a passion for empowering entrepreneurs. With over a decade of experience in financial management, she founded Accountpartners to bridge the gap between compliance and growth for Nigerian businesses.</p>
+      <p>Her mission is simple: to help business owners move from hustle to structure, and from stress to clarity. Through her leadership, Accountpartners has become a trusted ally for startups and SMEs across Nigeria.</p>
+      <blockquote class="founder-quote">“Don’t just business—accurate it.”</blockquote>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-wrapper">
+    <div class="footer-brand">
+      <h3>Accountpartners</h3>
+      <p>“Don’t just business—accurate it.”</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQ</a>
+
+    </div>
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p>Email: apartners@gmail.com/info@acountpartners.ng</p>
+      <p>Phone: 07033088392/08055855102</p>
+      <p>Address: 11 Temidire Street, Ringroad, Ibadan</p>
+      <p>Address: 60 CMD Road (By secretariat Bus-stop), Macodo, Lagos.</p>
+
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Accountpartners. All rights reserved.</p>
+  </div>
+</footer>
+
+
+<script>
+  const imageElement = document.getElementById('swap-image');
+  const imageList = [
+    "https://media.istockphoto.com/id/1492334021/photo/senior-black-woman-calculating-her-retirement-annuity-at-home.jpg?s=612x612&w=0&k=20&c=vK6jAeWTtazUIKcftfD9DTyzeJthFVCeW3ehDYWVLLg=",
+    "https://media.istockphoto.com/id/2212838920/photo/small-and-medium-enterprises-are-businesses-with-a-small-number-of-income-assets-and.jpg?s=612x612&w=0&k=20&c=YM8WvpY_4RwV06DVHiTLVEIzSTwT39bvvT4UsW662mY=",
+    "https://media.istockphoto.com/id/1362265077/photo/business-people-signing-a-contract.jpg?s=612x612&w=0&k=20&c=DJU7T1LF4TtINn9v9ECDf1k00bIMiM5BVdqpFDIJoSY="
+  ];
+
+  let currentIndex = 0;
+
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % imageList.length;
+    imageElement.src = imageList[currentIndex];
+  }, 2000);
+ 
+  const nameText = "Olanike Olapeju Babalola";
+  const nameElement = document.getElementById("founder-name");
+  let index = 0;
+
+  function typeName() {
+    if (index < nameText.length) {
+      nameElement.textContent += nameText.charAt(index);
+      index++;
+      setTimeout(typeName, 100);
+    }
+  }
+
+  window.addEventListener("load", typeName);
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById("menu-toggle");
+    const navMenu = document.getElementById("nav-menu");
+
+    toggle.addEventListener("click", function () {
+      navMenu.classList.toggle("active");
+    });
+  });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #003366;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff6600;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #003366;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    padding: 0.75rem 1.5rem;
+    border-bottom: 1px solid #eee;
+  }
+}
+
+        .services-section {
+  background-color: #ffffff;
+  padding: 60px 30px;
+  color: #003366;
+}
+
+.services-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.services-heading h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #003366;
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.services-description {
+  flex: 1;
+  max-width: 600px;
+}
+
+.services-description p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333333;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .services-heading h2 {
+    font-size: 32px;
+  }
+
+  .services-description p {
+    font-size: 16px;
+  }
+}
+.services-grid {
+  background-color: #ffffff;
+  padding: 60px 30px;
+  color: #333333;
+  text-align: center;
+}
+
+.services-title {
+  font-size: 36px;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.services-intro {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: #333333;
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 51, 102, 0.1);
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 20px;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333333;
+  margin-bottom: 15px;
+}
+
+.card button {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #e65c00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-title {
+    font-size: 28px;
+  }
+
+  .services-intro {
+    font-size: 16px;
+  }
+
+  .card h3 {
+    font-size: 18px;
+  }
+
+  .card p {
+    font-size: 14px;
+  }
+}
+
+footer {
+  background-color: #003366;
+  color: white;
+  padding: 40px 20px 20px;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-container div {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-brand h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #ff6600;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #ff6600;
+}
+
+.footer-links a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffcc00;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #ffffff33;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #cccccc;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-container div {
+    margin-bottom: 20px;
+  }
+}
+
+
+    </style>
+</head>
+<body>
+  
+ <header>
+  <div class="logo">
+    <img src="yt.png" alt="Accountpartners Logo" />
+  </div>
+  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+  <nav id="nav-menu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="faq.html">FAQ</a>
+  </nav>
+</header>
+
+</header>
+<section class="services-section">
+  <div class="services-wrapper">
+    <div class="services-heading">
+      <h2>OUR SERVICES</h2>
+    </div>
+    <div class="services-description">
+      <p>We offer a variety of services designed to simplify your financial management and give you more time to focus on what matters most—running your business.</p>
+    </div>
+  </div>
+</section>
+<section class="services-grid">
+  <h2 class="services-title">OUR SERVICES</h2>
+  <p class="services-intro">We provide a full suite of financial and business support services tailored to help you stay compliant, confident, and focused on growth.</p>
+
+  <div class="service-cards">
+    <div class="card">
+      <img src="https://plus.unsplash.com/premium_photo-1661308288174-0f6ac8d391d7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Ym9va2tlZXBpbmd8ZW58MHx8MHx8fDA%3D" alt="Bookkeeping">
+      <h3>Monthly Bookkeeping</h3>
+      <p>We handle your bank reconciliation, expense tracking, and monthly reporting so you can focus on building your business—not balancing spreadsheets.</p>
+      <button type="button" onclick="window.location.href='contact.html'">Book now</button>
+    </div>
+
+    <div class="card">
+      <img src="https://plus.unsplash.com/premium_photo-1679784204546-589414778830?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fFRheCUyMEZpbGluZyUyMFByZXB8ZW58MHx8MHx8fDA%3D" alt="Tax Filing Prep">
+      <h3>Tax Filing Prep</h3>
+      <p>We prepare your tax documents, advise on payment schedules, and support you through every filing season with clarity and confidence.</p>
+        <button type="button" onclick="window.location.href='contact.html'">Book now</button>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1667936504979-0e9683cbe47a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Q3VzdG9tJTIwQnVuZGxlcyUyMGJ1c2luZXNzfGVufDB8fDB8fHww" alt="Custom Bundles">
+      <h3>Custom Bundles</h3>
+      <p>Need something more tailored? We create flexible packages that match your business model, goals, and budget—no one-size-fits-all here.</p>
+      <button type="button" onclick="window.location.href='contact.html'">Book now</button>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1653565684985-0b1a64cf7afc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8UGF5cm9sbCUyMCUyNiUyMFN0YWZmJTIwVHJhaW5pbmclMjBmb3IlMjBibGFjayUyMHBlb3BsZXxlbnwwfHwwfHx8MA%3D%3D" alt="Payroll & Staff Training">
+      <h3>Payroll & Staff Training</h3>
+      <p>We set up payroll systems and train your team to manage accounting tools with ease—giving you control and peace of mind.</p>
+   <button type="button" onclick="window.location.href='contact.html'">Book now</button>
+    </div>
+
+    <div class="card">
+      <img src="https://media.istockphoto.com/id/901653152/photo/team-building-the-word-compliance.webp?a=1&b=1&s=612x612&w=0&k=20&c=KV5rBkjP6C4DCbuJqZ_YQPZlGtsDmzbH_vOU0M9WqSs=" alt="Internal Controls">
+      <h3>Internal Controls & Stocktaking</h3>
+      <p>We help you build strong internal systems and conduct accurate stock audits to protect your assets and improve operational efficiency.</p>
+      <button type="button" onclick="window.location.href='contact.html'">Book now</button>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fEJ1c2luZXNzJTIwQ29uc3VsdGluZ3xlbnwwfHwwfHx8MA%3D%3D" alt="Business Consulting">
+      <h3>Business & Financial Consulting</h3>
+      <p>From startup strategy to financial forecasting, we guide you with expert insights to help you make smarter decisions and scale sustainably.</p>
+     <button type="button" onclick="window.location.href='contact.html'">Book now</button>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="footer-container">
+    <div class="footer-brand">
+      <h3>Accountpartners</h3>
+      <p>“Don’t just business—accurate it.”</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+     <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="faq.html">FAQ</a>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p>Email: apartners@gmail.com/info@acountpartners.ng</p>
+      <p>Phone: 07033088392/08055855102</p>
+      <p> Address: 11 Temidire Street, Ringroad, Ibadan</p>
+      <p>Address: 60 CMD Road (By secretariat Bus-stop), Macodo, Lagos.</p>
+
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Accountpartners. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById("menu-toggle");
+    const navMenu = document.getElementById("nav-menu");
+
+    toggle.addEventListener("click", function () {
+      navMenu.classList.toggle("active");
+    });
+  });
+</script>
+
+</body>
+</html>

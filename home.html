@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AccountPartners - Home</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #003366;
+    }
+
+    header {
+      background-color: #ffffff;
+      color: #003366;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 110px;
+      width: 110px;
+      margin-right: 10px;
+    }
+
+    .logo span {
+      font-size: 24px;
+      font-weight: bold;
+      color: #003366; /* Orange */
+    }
+
+    nav a {
+      color: #003366;
+      text-decoration: none;
+      margin: 0 15px;
+      transition: color 0.3s ease;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #ff7f00;
+    }
+
+    .hero {
+      background-color: #f0f4f8;
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      color: #003366;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin: 20px auto;
+      max-width: 800px;
+      line-height: 1.6;
+    }
+
+    .hero .btn-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 40px;
+    }
+
+    .hero button {
+      background-color: #003366;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .hero button:hover {
+      background-color: blue;
+    }
+
+    .stats-section {
+      display: flex;
+      /* justify-content: center; */
+      align-items: center;
+      flex-wrap: wrap;
+     overflow: hidden;
+     /* width: 100%; */
+     height: 600px;
+     
+      color: white;
+      padding: 60px 20px;
+      background-image: url(https://bing.com/th/id/BCO.7962b31c-1f7f-40c9-a7c1-d782f028b497.png);
+      z-index: 1;
+      background-repeat: no-repeat;
+      margin-left: 90px;
+    }   
+
+    .stats-box {
+      background-color: #003366;
+      padding: 40px;
+      border-radius: 10px;
+      /* margin: 20px; */
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      z-index: 10;
+    }
+
+    .image-row {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .image-row img {
+      width: 90%;
+      max-width: 700px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 0;
+    }
+.why{
+  /* background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTkWZUJEcYYAiq9Zk4GJIfKWye-xztWc873Q&s); */
+color: #003366;
+/* justify-content: center; */
+align-items: center;
+display: flex;
+}
+.whys{
+  margin-left: 10px;
+}
+.whys img {
+border-radius:15px ;
+overflow: hidden;
+width: 500px;
+}
+.wh{
+  padding-left: 20px;
+}
+.wh li{
+  font-size: 20px;
+  /* list-style: none; */
+  margin-left: 10px;
+}
+.wh h1{
+  font-size: 45px;
+}
+
+    @media (max-width: 768px) {
+      header, nav {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="yt.png" alt="AccountPartners Logo">
+      <span>Accountpartners</span>
+    </div>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="blog.html">FAQ</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to Accountpartners</h1>
+    <p>Helping Nigerian businesses thrive with exceptional accounting, tax and business advisory services</p>
+    <div class="btn-container">
+      <button onclick="location.href='contact.html'">Get a consultation</button>
+      <!-- <button onclick="location.href='clients.html'">Meet Our Clients</button> -->
+      <!-- <button onclick="location.href='team.html'">Meet the Team</button> -->
+    </div>
+  </section>
+
+  <section class="stats-section">
+   
+  </section>
+
+  <section class="image-row">
+    
+  </section>
+
+<section class="why">
+<div class="whys">
+  <img src="https://bing.com/th/id/BCO.1906e6c9-4d36-4b82-8688-d40c99843730.png" alt="">
+</div>
+<div class="wh">
+  <h1>Why choose Accountpartners?</h1>
+<ul>
+  <li>Over 500+ satisfied clients</li>
+  <li>Affordable pricing tailored for <br> Nigerin SMEs</li>
+  <li>Expertise in tax, bookkeeping, <br> and business advisory</li>
+  <li>Cloud based <br> solutions & <br> remote access</li>
+
+</ul>
+</div>
+</section>
+
+  <footer>
+    &copy; 2025 AccountPartners | All rights reserved.
+  </footer>
+  <script>
+    // JavaScript Button Animation ✨
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(button => {
+      button.addEventListener('mouseenter', () => {
+        button.style.transform = 'scale(1.05)';
+      });
+      button.addEventListener('mouseleave', () => {
+        button.style.transform = 'scale(1)';
+      });
+    });
+    
+  </script>
+</body>
+</html>

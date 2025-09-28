@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Accountpartners - More Than Numbers</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f8ff; /* Light blueish white */
+    margin: 0;
+    padding: 0;
+    color: #003366; /* Deep blue */
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 3rem;
+    background: #ffffff;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  header .logo img {
+    height: 90px;
+    width: 90px;
+  }
+  nav a {
+    text-decoration: none;
+    color: #003366;
+    margin-left: 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #0073e6; /* Brighter blue */
+  }
+  h1 {
+    font-size: 4.5rem;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 1rem;
+    color: #003366;
+  }
+  .hero {
+    max-width: 1200px;
+    margin: 2rem auto 4rem auto;
+    padding: 2rem;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 12px 24px rgba(0,115,230,0.15);
+  }
+  .hero img {
+    max-width: 80%;
+    border-radius: 20px;
+    margin: 2rem auto 0;
+    display: block;
+    box-shadow: 0 12px 24px rgba(0,115,230,0.3);
+  }
+  .finance-flair {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 20px;
+    color: #003366;
+    box-shadow: 0 8px 20px rgba(0,115,230,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+  .finance-flair h2 {
+    font-family: 'Times New Roman', serif;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    flex: 1 1 40%;
+    margin: 0;
+  }
+  .finance-flair p {
+    flex: 1 1 50%;
+    font-size: 1rem;
+    color: #333333;
+    line-height: 1.4;
+  }
+  #curved-text {
+    font-family: 'Times New Roman', serif;
+    font-size: 1.2rem;
+    color: #003366;
+    margin-top: 2rem;
+    white-space: nowrap;
+    letter-spacing: 0.1rem;
+    text-align: center;
+  }
+  body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+    }
+    .about-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 40px;
+      background-color: #f9f9f9;
+    }
+    .about-text {
+      flex: 1;
+      max-width: 500px;
+      padding: 20px;
+    }
+    .about-text h2 {
+      color: #003366;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    .about-text p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #333333;
+      margin-bottom: 20px;
+    }
+    .about-text button {
+      background-color: #ff6600;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 14px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .about-image {
+      flex: 1;
+      max-width: 400px;
+      padding: 20px;
+      text-align: center;
+    }
+    .about-image img {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #003366;
+    }
+    .menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #003366;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  nav a {
+    padding: 0.75rem 1.5rem;
+    margin: 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .finance-flair {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.5rem;
+  }
+
+  .finance-flair h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .finance-flair p {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  #curved-text {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  .about-section {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .about-text, .about-image {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .about-text h2 {
+    font-size: 28px;
+  }
+
+  .about-text p {
+    font-size: 15px;
+  }
+
+  .about-image img {
+    width: 250px;
+    height: 250px;
+  }
+}
+footer {
+  background-color: #003366;
+  color: white;
+  padding: 40px 20px 20px;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-container div {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-brand h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #ff6600;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #ff6600;
+}
+
+.footer-links a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffcc00;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #ffffff33;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #cccccc;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-container div {
+    margin-bottom: 20px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="yt.png" alt="Accountpartners Logo" />
+  </div>
+  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+  <nav id="nav-menu">
+    <a href="services.html">Services</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+    <a href="faq.html">FAQ</a>
+
+  </nav>
+</header>
+
+
+<section class="hero">
+  <h1>More Than Numbers</h1>
+  <img src="https://media.istockphoto.com/id/1171103202/photo/small-business-developer-working-on-a-laptop-in-a-restaurant.jpg?s=612x612&w=0&k=20&c=YxEbyzJ_ST7zzpuqoszjbq4l_vbL9kfNHCMw3eEDfUI=" alt="Accountants reviewing financial documents" />
+</section>
+<section class="finance-flair">
+  <h2>YOUR PARTNER FOR TAX, <br>BOOKKEEPING  AND BUSINESS SUCCESS<span style="text-decoration: underline #ffcc00;">.</span></h2>
+  <p>Accountpartners was founded to address the growing needs of SMEs for reliable, client-focused accounting and business advisory supports. We offer a comprehensive range of services including bookkeeping, financial statement preparation, tax consultation, auditing, accounting system setups, payroll preparation and secretarial services (business registration, annual return filling and other CAC requirements).</p>
+  <div id="curved-text"> • We balace books, you build dreams • We track expences, you track Success • we handle stress, you handle strategy • We file returns, you return profits • We give clarity, you gain control </div>
+</section>
+
+<section class="about-section">
+    <div class="about-text">
+      <h2>ABOUT US</h2>
+      <p>At Accountpartners, we pride ourselves on being more than just accountants—we are your partners in achieving financial success. Our expertise, commitment, and personalized approach make us the ideal choice for businesses seeking efficient and dependable accounting solutions.</p>
+      <p>Our team of Chartered Accountants, Tax Consultants, and IT Experts works collaboratively to streamline operations, enhance compliance, and make financial management more approachable. We help entrepreneurs navigate complexity with clarity, confidence, and a touch of innovation.</p>
+      <a href="about.html"><button>Learn More</button></a>
+    </div>
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1739298061740-5ed03045b280?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJsYWNrJTIwcGVvcGxlJTIwaGF2aW5nJTIwYSUyMGJ1c2luZXNzJTIwbWVldGluZ3xlbnwwfHwwfHx8MA%3D%3D" alt="Accountpartners Team">
+    </div>
+  </section>
+
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-brand">
+      <h3>Accountpartners</h3>
+      <p>“Don’t just business—accurate it.”</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="services.html">Services</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+    <a href="faq.html">FAQ</a>
+
+    </div>
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p>Email: apartners@gmail.com/info@acountpartners.ng</p>
+      <p>Phone: 07033088392/08055855102</p>
+      <p>Address: 11 Temidire Street, Ringroad, Ibadan</p>
+      <p>Address: 60 CMD Road (By secretariat Bus-stop), Macodo, Lagos.</p>
+
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Accountpartners. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/circletype@2.3.0/dist/circletype.min.js"></script>
+<script>
+  const curvedText = new CircleType(document.getElementById('curved-text')).radius(180);
+  let angle = 0;
+  setInterval(() => {
+    angle = (angle + 1) % 360;
+    curvedText.element.style.transform = `rotate(${angle}deg)`;
+  }, 30);
+</script>
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+
+  toggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>
