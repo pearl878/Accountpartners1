@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accountpartners — Trusted Accounting for Nigerian SMEs</title>
+  <meta name="description" content="AccountPartners: bookkeeping, tax, payroll and advisory services for Nigerian SMEs. Transparent pricing, local expertise, reliable support." />
+  <style>
+    :root{--accent:#003366;--muted:#666;--card:#ffffff;--bg:#f6f8fb}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:var(--bg); color:#111}
+    .container{max-width:1100px;margin:0 auto;padding:32px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    /* .logo{width:48px;height:48px;border-radius:8px;background:var(--accent);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700} */
+    nav a{margin-left:16px;color:var(--muted);text-decoration:none}
+    .hero{display:flex;gap:24px;align-items:center;padding:48px 0}
+    .hero-left{flex:1}
+    .hero h1{font-size:32px;margin:0 0 8px}
+    .hero p{margin:0 0 18px;color:var(--muted)}
+    .cta{display:flex;gap:12px}
+    .btn{background:var(--accent);color:#fff;padding:12px 18px;border-radius:10px;border:none;cursor:pointer}
+    .btn-outline{background:transparent;border:2px solid var(--accent);color:var(--accent);padding:10px 16px;border-radius:10px}
+    .card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(10,124,255,0.06)}
+    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:24px}
+    .features{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .quote{font-style:italic;color:var(--accent);border-left:4px solid var(--accent);padding:12px 16px;background:#fff;margin:18px 0;border-radius:8px}
+    .pricing{display:flex;gap:16px;flex-wrap:wrap;margin-top:16px}
+    #pricing p {
+      color: red;
+    }
+    .price-card{flex:1;min-width:240px}
+    ul{padding-left:18px}
+  footer {
+  background-color: #003366;
+  color: white;
+  padding: 40px 20px 20px;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-container div {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-brand h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #ff6600;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #ff6600;
+}
+
+.footer-links a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffcc00;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #ffffff33;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #cccccc;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-container div {
+    margin-bottom: 20px;
+  }
+}
+    .testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+    @media(max-width:700px){.hero{flex-direction:column;align-items:flex-start}.hero h1{font-size:24px}}
+  .logo img {
+  height: 60px;
+  width: auto;
+}
+form {
+  flex: 1;
+  min-width: 280px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 51, 102, 0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #003366;
+}
+
+input,
+ textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+form button {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #e65c00;
+}
+
+#success-message {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+ form
+  .contact-info {
+    width: 100%;
+    text-align: center;
+  }
+
+  form label {
+    text-align: left;
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo"><img src="yt.png" alt=""></div>
+        <div>
+          <div style="font-weight:700">Accountpartners</div>
+          <div style="font-size:12px;color:var(--muted)">Accounting · Tax · Payroll · Advisory</div>
+        </div>
+      </div>
+      <nav>
+      <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="faq.html">FAQ</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Accountability that grows your business.  Reliable, local & practical.</h1>
+        <p>We help Nigerian SMEs with bookkeeping, tax compliance, payroll and financial advisory so you can focus on growing sales. Simple pricing. Clear results.</p>
+        <div class="cta">
+          <!-- <button class="btn-outline" style="margin-top:12px"class="btn" style="margin-top:12px" type="button" onclick="window.location.href='contact.html'">Get Free Quote</button> -->
+          <button class="btn" style="margin-top:12px" type="button" onclick="window.location.href='services.html'">See Packages</button>
+        </div>
+
+        <div class="features">
+          <div class="card" style="min-width:220px">✅ Local tax expertise (FIRS, State, WHT & VAT)</div>
+          <div class="card" style="min-width:220px">✅ Cloud bookkeeping & monthly management reports</div>
+          <div class="card" style="min-width:220px">✅ Payroll, PAYE, and HR-ready reports</div>
+        </div>
+
+        <div class="quote">"Don't just business, accurate it" — Accountpartners</div>
+
+      </div>
+
+      <div style="flex:0 0 360px">
+        <div class="card">
+          <h3 style="margin-top:0">Quick Quote</h3>
+          <p style="margin:0 0 12px;color:var(--muted)">Tell us your business size and we'll recommend a package</p>
+    <form class="contact-form" action="https://formspree.io/f/mwprvdoq" method="POST" id="contact-form">
+          
+             
+            <label style="font-size:13px">Business Type</label><br>
+            <select style="width:100%;padding:8px;margin:6px 0;border-radius:8px;border:1px solid #e6eefc">
+              <option>Freelancer / Sole Proprietor</option>
+              <option>Small Business (1–10 staff)</option>
+              <option>Growing SME (11–50 staff)</option>
+            </select>
+            <label style="font-size:13px">Email</label><br>
+            <input type="email" placeholder="you@business.com" style="width:100%;padding:8px;margin:6px 0;border-radius:8px;border:1px solid #e6eefc">
+            <button class="btn" style="width:100%;margin-top:8px"  type="button" onclick="window.location.href='contact.html'">Request Quote</button>
+          </form>
+          <p style="font-size:12px;color:var(--muted);margin-top:12px">Or <a href="contact.html">contact us</a> for a custom plan.</p>
+        </div>
+      </div>
+    </section>
+
+  
+
+
+      <div class="quote">"Good accounting is a growth engine — not just a cost. Let numbers fuel your next decision."</div>
+
+
+    <section id="pricing">
+      <h2>Pricing</h2>
+      <p>Simple, predictable packages <br>Custom quotes available.</p>
+
+      <div class="pricing">
+        <div class="card price-card">
+          <h3>Starter</h3>
+          <h4>From ₦100,000 / month</h4>
+          <ul>
+         <li> Best for freelancers, self-employed, and very small businesses</li>  
+
+<li>Bookkeeping (up to 100 monthly transactions)</li>
+<li>Preparation & filing of annual tax returns</li>
+
+<li>TIN & basic tax compliance support</li>
+
+
+
+<li>Email Support</li>
+          </ul>
+          <button class="btn" style="margin-top:12px">Get Started</button>
+        </div>
+
+        <div class="card price-card" style="border:2px solid var(--accent)">
+          <h3>Growth</h3>
+          <h4>From ₦250,000 / month</h4>
+          <ul>
+            <li>Bookkeeping (up to 500 transactions)</li>
+            <li>Monthly management reports</li>
+            <li>Payroll (up to 10 staff)</li>
+            <li>VAT & tax filing</li>
+            <li>Quarterly compliance check-ins </li>
+<li>WhatsApp & email support</li>
+          </ul>
+          <button class="btn" style="margin-top:12px" type="button" onclick="window.location.href='contact.html'">Book Free Consultation</button>
+        </div>
+
+        <div class="card price-card">
+          <h3>Premium</h3>
+          <h4>From ₦500,000 / month</h4>
+          <ul>
+            <li>Unlimited bookkeeping</li>
+            <li>Payroll (up to 50 staff)</li>
+            <li>Quarterly advisory</li>
+            <li>Dedicated account manager</li>
+            <li>Priority support (phone, WhatsApp, email)</li>
+          </ul>
+          <button class="btn" style="margin-top:12px"  type="button" onclick="window.location.href='contact.html'">Talk to Us</button>
+        </div>
+      </div>
+
+      <p style="font-size:13px;color:var(--muted);margin-top:10px">Need a tailored enterprise solution? <a href="contact">Contact us</a> for a custom proposal.</p>
+    </section>
+
+    
+      <div style="margin-top:12px" class="quote">"Trust is earned. We earn it by delivering accurate numbers and clear advice." — AccountPartners</div>
+    </section>
+
+   
+    <section id="contact" style="margin-top:24px;display:flex;gap:18px;flex-wrap:wrap">
+      <div style="flex:1;min-width:280px" class="card">
+        <h3>Contact Us</h3>
+        <p style="color:var(--muted)">Questions? Want a custom quote? Drop your details and we’ll reply within one business day.</p>
+    <form class="contact-form" action="https://formspree.io/f/mwprvdoq" method="POST" id="contact-form">
+          
+        <label for="first-name">First Name *</label>
+
+      <input type="text" id="first-name" name="first-name" required>
+
+      <label for="last-name">Last Name</label>
+      <input type="text" id="last-name" name="last-name">
+
+      <label for="email">Email </label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5"></textarea>
+
+      <button type="submit">Send</button>
+      <p id="success-message" style="display:none; color: green; margin-top: 15px;">✅ Thank you! Your message has been sent.</p>
+    </form>
+      </div>
+
+      <div style="flex:1;min-width:280px" class="card">
+        <h3>Visit / Call</h3>
+        <p style="margin:0 0 6px"><strong>Email:</strong> info@accountpartners.ng</p>
+        <p style="margin:0 0 6px"><strong>Phone:</strong> +234 805 585 5102</p>
+        <p style="margin:0 0 6px"><strong>Office:</strong>   60, CMD Road (By secretariat Bus-stop), Magodo, Lagos.</p>
+        <p style="margin:0 0 6px"><strong></strong> 11, Temidire Street, Ringroad, Ibadan </p>
+
+      </div>
+    </section>
+<footer>
+  <div class="footer-container">
+    <div class="footer-brand">
+      <h3>Accountpartners</h3>
+      <p>“Don’t just business—accurate it.”</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+     <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="faq.html">FAQ</a>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p>  info@accountpartners.ng</p>
+      <p>    Email:    apartners247@gmail.com</p>
+      <p>Phone: 07033088392/08055855102</p>
+     
+      <p>Ibadan address:  11, Temidire Street, Ringroad, Ibadan</p>
+      <p> Lagos address:  60, CMD Road (By secretariat Bus-stop), Magodo, Lagos.</p>
+
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Accountpartners. All rights reserved.</p>
+  </div>
+</footer>
+
+   
+  </div>
+</body>
+</html>

@@ -286,8 +286,95 @@ footer {
     margin-bottom: 20px;
   }
 }
+.about-pricing-section {
+  background-color: #ffffff;
+  padding: 60px 30px;
+  color: #003366;
+}
 
+.about-pricing-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+  flex-wrap: wrap;
+}
 
+.pricing-left h1 {
+  font-size: 42px;
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+}
+
+.pricing-right {
+  flex: 1;
+  max-width: 600px;
+}
+
+.pricing-right p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333333;
+  margin-bottom: 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.pricing-right button {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pricing-right button:hover {
+  background-color: #e65c00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-pricing-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .pricing-left h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .pricing-right p {
+    font-size: 16px;
+  }
+
+  .pricing-right button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+.btn{
+  width: 230px;
+  color: transparent;
+}
+.kj p{
+  height: 21px;
+}
+.wc p{
+  height: 105px;
+}
+.cw p{
+  height: 25px;
+}
+.mnh p{
+  height:21px;
+}
+ ul{padding-left:18px}
     </style>
 </head>
 <body>
@@ -310,61 +397,111 @@ footer {
 <section class="services-section">
   <div class="services-wrapper">
     <div class="services-heading">
-      <h2>OUR SERVICES</h2>
-    </div>
-    <div class="services-description">
-      <p>We offer a variety of services designed to simplify your financial management and give you more time to focus on what matters most—running your business.</p>
-    </div>
-  </div>
+   
 </section>
 <section class="services-grid">
   <h2 class="services-title">OUR SERVICES</h2>
-  <p class="services-intro">We provide a full suite of financial and business support services tailored to help you stay compliant, confident, and focused on growth.</p>
+  <p class="services-intro">We provide a full suite of financial and business support services tailored to help you stay compliant, confident, and focused on growth.We offer a variety of services designed to simplify your financial management and give you more time to focus on what matters most—running your business.</p>
 
   <div class="service-cards">
     <div class="card">
       <img src="https://plus.unsplash.com/premium_photo-1661308288174-0f6ac8d391d7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Ym9va2tlZXBpbmd8ZW58MHx8MHx8fDA%3D" alt="Bookkeeping">
       <h3>Monthly Bookkeeping</h3>
-      <p>We handle your bank reconciliation, expense tracking, and monthly reporting so you can focus on building your business—not balancing spreadsheets.</p>
+      <p>Daily or monthly bookkeeping, Excel templates, Zoho, Quickbooks and customised softwares set up, bank reconciliation and clean records for management, tax and fundraising.</p>
+      <ul>
+            <li>Bank and mobile money reconciliation</li>
+            <li>Monthly/yearly financial reports</li>
+            <li>Cloud file & receipts management</li>
+            <li>Accounting system setup</li>
+          </ul>
       <button type="button" onclick="window.location.href='contact.html'">Book now</button>
     </div>
 
     <div class="card">
       <img src="https://plus.unsplash.com/premium_photo-1679784204546-589414778830?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fFRheCUyMEZpbGluZyUyMFByZXB8ZW58MHx8MHx8fDA%3D" alt="Tax Filing Prep">
-      <h3>Tax Filing Prep</h3>
-      <p>We prepare your tax documents, advise on payment schedules, and support you through every filing season with clarity and confidence.</p>
+      <h3>Tax Filing & Compliance</h3>
+      <p>Corporate tax (CIT), VAT returns, PAYE, WHT and liason with tax authorities. We support you through every filing season with clarity and confidence.
+       <ul>
+            <li>Annual tax filing</li>
+            <li>VAT & monthly/quarterly returns</li>
+            <li>Tax planning </li>
+            <li>Tax query and dispute support</li>
+
+          </ul>
+      </p>
+      
+      <div class="mnh"><p></p></div>
         <button type="button" onclick="window.location.href='contact.html'">Book now</button>
     </div>
 
     <div class="card">
       <img src="https://images.unsplash.com/photo-1667936504979-0e9683cbe47a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Q3VzdG9tJTIwQnVuZGxlcyUyMGJ1c2luZXNzfGVufDB8fDB8fHww" alt="Custom Bundles">
-      <h3>Custom Bundles</h3>
-      <p>Need something more tailored? We create flexible packages that match your business model, goals, and budget—no one-size-fits-all here.</p>
+      <h3>Audit & Assurance</h3>
+      <p>Independent audit and assurance services for credible compliance and stakeholder confidence. We provide Statutory audit and financial statement assurance.</p>
+       <li>Financial Statement Audit</li>
+       <li>Statutory Audit</li>
+       <li>Internal Audit Review</li>
+       <li>Compliance and Regulatory Audit</li>
+       <div class="kj"><p></p></div>
+
       <button type="button" onclick="window.location.href='contact.html'">Book now</button>
     </div>
 
     <div class="card">
       <img src="https://images.unsplash.com/photo-1653565684985-0b1a64cf7afc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8UGF5cm9sbCUyMCUyNiUyMFN0YWZmJTIwVHJhaW5pbmclMjBmb3IlMjBibGFjayUyMHBlb3BsZXxlbnwwfHwwfHx8MA%3D%3D" alt="Payroll & Staff Training">
       <h3>Payroll & Staff Training</h3>
-      <p>We set up payroll systems and train your team to manage accounting tools with ease—giving you control and peace of mind.</p>
-   <button type="button" onclick="window.location.href='contact.html'">Book now</button>
+      <p>Accurate payroll, statutory deductions, payslips and staff reports to keep you compliant. We train your team to manage accounting tools with ease, giving you control and peace of mind.</p>
+   <ul>
+            <li>PAYE & pensions</li>
+            <li>Payslip automation</li>
+            <li>Monthly payroll reports</li>
+            <li>Tax filling and Accounting software training</li>
+            
+          </ul>
+      <div class="cw"><p></p></div>
+
+      <button type="button" onclick="window.location.href='contact.html'">Book now</button>
     </div>
 
     <div class="card">
       <img src="https://media.istockphoto.com/id/901653152/photo/team-building-the-word-compliance.webp?a=1&b=1&s=612x612&w=0&k=20&c=KV5rBkjP6C4DCbuJqZ_YQPZlGtsDmzbH_vOU0M9WqSs=" alt="Internal Controls">
       <h3>Internal Controls & Stocktaking</h3>
       <p>We help you build strong internal systems and conduct accurate stock audits to protect your assets and improve operational efficiency.</p>
+      <div class="wc"><p></p></div>
       <button type="button" onclick="window.location.href='contact.html'">Book now</button>
     </div>
 
     <div class="card">
       <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fEJ1c2luZXNzJTIwQ29uc3VsdGluZ3xlbnwwfHwwfHx8MA%3D%3D" alt="Business Consulting">
-      <h3>Business & Financial Consulting</h3>
-      <p>From startup strategy to financial forecasting, we guide you with expert insights to help you make smarter decisions and scale sustainably.</p>
-     <button type="button" onclick="window.location.href='contact.html'">Book now</button>
+      <h3> Business Advisory & CFO services</h3>
+      <p> Cashflow forecasting, budgeting and investor ready financials. From startup strategy to financial forecasting, we guide you with expert insights to help you make smarter decisions and scale sustainably.</p>
+     <ul>
+            <li>Financial modelling</li>
+            <li>Cashflow & working capital advice</li>
+            <li>Board-ready management packs</li>
+          </ul>
+    
+      <button type="button" onclick="window.location.href='contact.html'">Book now</button>
     </div>
   </div>
 </section>
+<section class="about-pricing-section">
+  <div class="about-pricing-wrapper">
+    <div class="pricing-left">
+      <h1>Our Pricing</h1>
+    </div>
+    <div class="pricing-right">
+      <p>
+        We offer flexible pricing plans designed to meet the needs of startups, growing businesses, and established enterprises. Whether you need monthly bookkeeping, tax filing prep, or full-scale consulting, our packages are built to deliver value and clarity.
+      </p>
+      <p>
+        No hidden fees. No surprises. Just transparent pricing that helps you stay focused on growth.
+      </p>
+      <button onclick="window.location.href='pricing.html'">Explore Pricing</button>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="footer-container">
     <div class="footer-brand">
@@ -382,10 +519,12 @@ footer {
 
     <div class="footer-contact">
       <h4>Contact Us</h4>
-      <p>Email: apartners@gmail.com/info@acountpartners.ng</p>
+      <p>  info@accountpartners.ng</p>
+      <p>    Email:    apartners247@gmail.com</p>
       <p>Phone: 07033088392/08055855102</p>
-      <p> Address: 11 Temidire Street, Ringroad, Ibadan</p>
-      <p>Address: 60 CMD Road (By secretariat Bus-stop), Macodo, Lagos.</p>
+     
+      <p>Ibadan address:  11, Temidire Street, Ringroad, Ibadan</p>
+      <p> Lagos address:  60, CMD Road (By secretariat Bus-stop), Magodo, Lagos.</p>
 
     </div>
   </div>

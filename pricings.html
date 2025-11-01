@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fees | Accountpartners</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      color: #003366;
+    }
+ header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 3rem;
+    background: #ffffff;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  header .logo img {
+    height: 90px;
+    width: 90px;
+  }
+  nav a {
+    text-decoration: none;
+    color: #003366;
+    margin-left: 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #0073e6; /* Brighter blue */
+  }
+   .menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #003366;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  nav a {
+    padding: 0.75rem 1.5rem;
+    margin: 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  nav.active {
+    display: flex;
+  }
+}
+  footer {
+  background-color: #003366;
+  color: white;
+  padding: 40px 20px 20px;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-container div {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-brand h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #ff6600;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #ff6600;
+}
+
+.footer-links a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffcc00;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #ffffff33;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #cccccc;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-container div {
+    margin-bottom: 20px;
+  }
+}
+
+  h1 {
+    font-size: 4.5rem;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 1rem;
+    color: #003366;
+  }
+    .fee-header {
+      background-color: #f2f2f2;
+      padding: 60px 30px;
+      text-align: center;
+    }
+
+    .fee-header h1 {
+      font-size: 42px;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 20px;
+    }
+
+    .fee-header p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #333333;
+    }
+
+    .fee-grid {
+      padding: 60px 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .fee-card {
+      background-color: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 51, 102, 0.1);
+      padding: 30px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .fee-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .fee-card i {
+      margin-bottom: 15px;
+    }
+
+    .fee-card h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .fee-card .price {
+      font-size: 20px;
+      color: #ff6600;
+      margin-bottom: 15px;
+    }
+
+    .fee-card p {
+      font-size: 16px;
+      color: #333333;
+      margin-bottom: 20px;
+    }
+
+    .fee-card button {
+      background-color: #ff6600;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      font-size: 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .fee-card button:hover {
+      background-color: #e65c00;
+    }
+
+    @media (max-width: 768px) {
+      .fee-header h1 {
+        font-size: 32px;
+      }
+
+      .fee-header p {
+        font-size: 16px;
+      }
+
+      .fee-card h3 {
+        font-size: 20px;
+      }
+
+      .fee-card .price {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="yt.png" alt="Accountpartners Logo" />
+    </div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <nav id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </header>
+
+  <section class="fee-header">
+    <h1>Our Service Fees</h1>
+    <p>Explore our full suite of financial and business support services. Each plan is designed to deliver clarity, compliance, and confidence—no matter your business size.</p>
+  </section>
+
+  <section class="fee-grid">
+    <div class="fee-card">
+      <i class="fas fa-file-invoice fa-2x" style="color:#ff6600;"></i>
+      <h3>Monthly Bookkeeping</h3>
+      <p class="price">₦50,000/month</p>
+      <p>Bank reconciliation, expense tracking, and monthly reporting to keep your finances organized.</p>
+      <button onclick="payWithPaystack('Monthly Bookkeeping', 50000)">Pay Now</button>`                                                                                   
+    </div>
+
+    <div class="fee-card">
+      <i class="fas fa-file-alt fa-2x" style="color:#ff6600;"></i>
+      <h3>Tax Filing Prep</h3>
+      <p class="price">₦75,000/year</p>
+      <p>Preparation of tax documents, payment schedule guidance, and filing support every season.</p>
+      <button onclick="payWithPaystack('Tax Filing Prep', 75000)">Pay Now</button>
+    </div>
+
+    <div class="fee-card">
+      <i class="fas fa-cubes fa-2x" style="color:#ff6600;"></i>
+      <h3>Custom Bundles</h3>
+      <p class="price">Starts at ₦100,000</p>
+      <p>Tailored packages based on your business model, goals, and budget. Flexible and scalable.</p>
+      <button onclick="window.location.href='contact.html'">Request Quote</button>
+    </div>
+
+    <div class="fee-card">
+      <i class="fas fa-users-cog fa-2x" style="color:#ff6600;"></i>
+      <h3>Payroll & Staff Training</h3>
+      <p class="price">₦60,000/month</p>
+      <p>Payroll system setup and training for your team to manage accounting tools confidently.</p>
+      <button onclick="payWithPaystack('Payroll & Staff Training', 60000)">Pay Now</button>
+    </div>
+
+    <div class="fee-card">
+      <i class="fas fa-shield-alt fa-2x" style="color:#ff6600;"></i>
+      <h3>Internal Controls & Stocktaking</h3>
+      <p class="price">₦80,000/session</p>
+      <p>Build strong internal systems and conduct accurate stock audits to protect your assets.</p>
+      <button onclick="payWithPaystack('Internal Controls & Stocktaking', 80000)">Pay Now</button>
+    </div>
+
+    <div class="fee-card">
+      <i class="fas fa-chart-line fa-2x" style="color:#ff6600;"></i>
+      <h3>Business & Financial Consulting</h3>
+      <p class="price">₦120,000/month</p>
+      <p>Expert guidance on strategy, forecasting, and decision-making to help you scale sustainably.</p>
+      <button onclick="payWithPaystack('Business & Financial Consulting', 120000)">Pay Now</button>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h3>Accountpartners</h3>
+        <p>“Don’t just business—accurate it.”</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>info@accountpartners.ng</p>
+        <p>Email: apartners247@gmail.com</p>
+        <p>Phone: 07033088392 / 08055855102</p>
+        <p>Ibadan: 11, Temidire Street, Ringroad, Ibadan</p>
+        <p>Lagos: 60, CMD Road (By secretariat Bus-stop), Magodo, Lagos</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Accountpartners. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+  
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+<script>
+  function payWithPaystack(service, amount) {
+    var handler = PaystackPop.setup({
+      key: 'pk_test_xxxxxxxxxxxxxxxxxxxxx', // Replace with your actual Paystack public key
+      email: 'customer@example.com',        // You can make this dynamic later
+      amount: amount * 100,                 // Convert to kobo
+      currency: 'NGN',
+      ref: 'AP-' + Math.floor((Math.random() * 1000000000) + 1),
+      metadata: {
+        custom_fields: [
+          {
+            display_name: "Service",
+            variable_name: "service_type",
+            value: service
+          }
+        ]
+      },
+      callback: function(response) {
+        alert('Payment complete! Reference: ' + response.reference);
+      },
+      onClose: function() {
+        alert('Transaction was not completed.');
+      }
+    });
+    handler.openIframe();
+  }
+ const toggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+
+  toggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+          </script>
+</body>
+</html>
